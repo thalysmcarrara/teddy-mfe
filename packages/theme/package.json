@@ -1,0 +1,7 @@
+{
+  "name": "@teddy/theme",
+  "version": "1.0.0",
+  "main": "theme.css",
+  "license": "MIT",
+  "packageManager": "pnpm@10.14.0"
+}
