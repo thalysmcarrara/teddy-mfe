@@ -1,0 +1,5 @@
+.tco-dashboard-layout-container {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--color-bg);
+}

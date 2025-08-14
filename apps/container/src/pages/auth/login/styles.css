@@ -1,0 +1,12 @@
+.tco-login-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px
+}
+
+.tco-login-title {
+  text-align: center;
+  font-weight: 400;
+}
+

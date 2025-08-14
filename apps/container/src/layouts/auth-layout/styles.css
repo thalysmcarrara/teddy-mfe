@@ -1,0 +1,7 @@
+.tco-auth-layout-container {
+  width: 100dvw;
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  background-color: var(--color-bg);
+}
