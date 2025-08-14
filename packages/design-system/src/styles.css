@@ -78,7 +78,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  width: auto;
+  max-width: max-content;
+  max-height: max-content;
   padding: 8px 8px;
   border: 0 solid transparent;
   border-radius: var(--radius-full, 9999px);

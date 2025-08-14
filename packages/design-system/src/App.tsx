@@ -3,6 +3,8 @@ import { Button } from "./components/Button"
 import Modal from "./components/Modal"
 import { TextField } from "./components/Textfield"
 import { Pagination } from "./components/Pagination"
+import { IconButton } from "./components/IconButton"
+import { Menu } from "lucide-react"
 
 const App = () => {
   const [open, setOpen] = useState(false)
@@ -25,6 +27,7 @@ const App = () => {
         <TextField placeholder="Digite o nome" disabled/>
         <TextField placeholder="Digite o nome"/>
         <Pagination totalPages={12} currentPage={page} onPageChange={setPage} siblingCount={1} />
+        <IconButton Icon={<Menu size={36} />} />
       </div>
     </div>
   )

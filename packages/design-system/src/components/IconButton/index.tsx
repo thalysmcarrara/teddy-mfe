@@ -1,5 +1,4 @@
 import React from 'react';
-// import './icon-button.css';
 
 type IconElement = React.ReactElement<{ className?: string }>;
 
