@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@teddy/design-system": ["packages/design-system/src/index.ts"],
+      "@teddy/design-system/icons": ["packages/design-system/src/icons.ts"],
+      "@teddy/design-system/styles": ["packages/design-system/src/styles.css"],
+      "@teddy/theme": ["packages/theme/theme.css"],
+    }
+  }
+}
