@@ -1,8 +1,9 @@
 import { Navigate, useRoutes } from 'react-router-dom';
-
+import { lazy } from 'react';
 import { AuthLayout } from '@src/layouts/auth-layout'
 import { DashboardLayout } from '@src/layouts/dashboard-layout'
-import { lazy } from 'react';
+import { AuthGuard, GuestGuard } from '@src/auth/guard';
+import { paths } from './paths';
 
 const LoginPage = lazy(() => import('@src/pages/auth/login'));
 
@@ -11,18 +12,34 @@ const LoginPage = lazy(() => import('@src/pages/auth/login'));
 export default function Router() {
   return useRoutes([
     {
-      path: '/dashboard',
+      path: paths.customers,
       element: (
-        <DashboardLayout><>Dashboard content</></DashboardLayout>
+        <AuthGuard>
+          <DashboardLayout>Customers Page</DashboardLayout>
+        </AuthGuard>
       )
     },
     {
-      path: '/',
+      path: paths.selected,
       element: (
-        <AuthLayout>
-          <LoginPage />
-        </AuthLayout>
+        <AuthGuard>
+          <DashboardLayout><>Selected Page</></DashboardLayout>
+        </AuthGuard>
+      )
+    },
+    {
+      path: paths.login,
+      element: (
+        <GuestGuard>
+          <AuthLayout>
+            <LoginPage />
+          </AuthLayout>
+        </GuestGuard>
       ),
+    },
+    {
+      path: paths.home,
+      element: <Navigate to={paths.customers} replace />
     },
     { path: '*', element: <Navigate to="/404" replace /> },
   ]);

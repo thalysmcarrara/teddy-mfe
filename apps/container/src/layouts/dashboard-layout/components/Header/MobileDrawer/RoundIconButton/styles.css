@@ -1,0 +1,29 @@
+.tco-round-icon-button-container {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background-color: black;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: -21px;
+  right: -21px;
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.tco-round-icon-button-container.hidden {
+  display: none;
+}
+
+.tco-round-icon-button-inner-content {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}

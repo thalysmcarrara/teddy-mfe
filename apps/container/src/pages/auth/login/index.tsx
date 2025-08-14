@@ -1,13 +1,13 @@
 import { Button, TextField } from '@teddy/design-system'
 import './styles.css'
 import { useState, type ChangeEvent, type FormEvent } from 'react'
-import { useRouter } from '@src/routes/hooks/use-router'
+import { useAuth } from '@src/auth/hooks/use-auth'
 
 const LoginPage = () => {
   const [name, setName] = useState('')
   const [error, setError] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
-  const router = useRouter()
+  const { login } = useAuth()
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -20,10 +20,7 @@ const LoginPage = () => {
 
     setError(false)
     setErrorMessage('')
-  
-    localStorage.setItem('user', name.trim())
-    
-    router.replace('/dashboard')
+    login(name.trim())
   }
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
