@@ -44,7 +44,7 @@ export function Main() {
   const renderContent = () => (
     <>
       <div  className="tcu-top-menu">
-        <p>{clients.length} clientes encontrados:</p>
+        <p><span style={{ fontWeight: 700, fontSize: 18, marginRight: 2 }}>{clients.length}</span> clientes encontrados:</p>
         <div className="tcu-per-page-container">
           <p>Clientes por página:</p>
           <NumberSelect items={itemPerPageOptions} value={limit} onChange={handleItemsPerPage} />
@@ -66,7 +66,7 @@ export function Main() {
         }
       </div>
       <Button variant="outlined" className="tcu-create-client-btn" onClick={() => setOpenCreateUserModal(true)}>Criar Client</Button>
-      <Pagination currentPage={currentPage} onPageChange={setCurrentPage} totalPages={totalPages} siblingCount={1}/>
+      <Pagination className='tcu-pagination' currentPage={currentPage} onPageChange={setCurrentPage} totalPages={totalPages} siblingCount={1}/>
     </>
   )
 

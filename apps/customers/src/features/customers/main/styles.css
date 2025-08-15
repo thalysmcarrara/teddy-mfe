@@ -26,6 +26,19 @@
 .tcu-top-menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto 10px auto;
+  width: 100%;
+}
+
+.tcu-create-client-btn {
+  margin: 20px auto 20px auto;
+  max-width: 285px;
+}
+
+.tcu-pagination {
+  margin-bottom: 40px;
 }
 
 .tcu-per-page-container {
@@ -38,11 +51,22 @@
   .tcu-card-list {
     grid-template-columns: repeat(2, 1fr);
   }
+  .tcu-top-menu {
+    max-width: 590px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .tcu-create-client-btn {
+    max-width: 590px;
+  }
 }
 
 @media (min-width: 950px) {
   .tcu-card-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .tcu-top-menu, .tcu-create-client-btn {
+    max-width: 895px;
   }
 }
 
@@ -50,8 +74,7 @@
   .tcu-card-list {
     grid-template-columns: repeat(4, 1fr);
   }
-}
-
-.tcu-create-client-btn {
-  margin: 20px 0;
+  .tcu-top-menu, .tcu-create-client-btn {
+    max-width: 1200px;
+  }
 }

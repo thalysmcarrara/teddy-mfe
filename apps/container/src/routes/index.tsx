@@ -1,9 +1,11 @@
 import { Navigate, useRoutes } from 'react-router-dom';
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import { AuthLayout } from '@src/layouts/auth-layout'
 import { DashboardLayout } from '@src/layouts/dashboard-layout'
 import { AuthGuard, GuestGuard } from '@src/auth/guard';
 import { paths } from './paths';
+
+const CustomersPage =lazy(() => import('customers/CustomersPage')); ;
 
 const LoginPage = lazy(() => import('@src/pages/auth/login'));
 
@@ -15,7 +17,11 @@ export default function Router() {
       path: paths.customers,
       element: (
         <AuthGuard>
-          <DashboardLayout>Customers Page</DashboardLayout>
+          <DashboardLayout>
+            <Suspense fallback={<p>Carregando pagina</p>}>
+              <CustomersPage />
+            </Suspense>
+          </DashboardLayout>
         </AuthGuard>
       )
     },

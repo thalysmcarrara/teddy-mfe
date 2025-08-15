@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 5000",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --port 5000"
   },
   "dependencies": {
     "@teddy/design-system": "workspace:*",
@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@originjs/vite-plugin-federation": "^1.4.1",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",

@@ -59,7 +59,7 @@ export const EditUserModal = ({ user, onClose }: editUserModalProps) => {
           disabled={updateUser.isPending || disableOnEmpty}
           onClick={handleSubmit}
         >
-          Criar Cliente
+          Editar Cliente
         </Button>
       }
     >

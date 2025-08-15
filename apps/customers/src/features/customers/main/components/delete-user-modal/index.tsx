@@ -23,7 +23,7 @@ export const DeleteUserModal = ({ user, onClose }: DeleteUserModalProps) => {
     <Modal
       open={true} onClose={onClose}
       title="Criar cliente:"
-      footer={<Button onClick={handleSubmit}>Criar Cliente</Button>
+      footer={<Button onClick={handleSubmit}>Deletar Cliente</Button>
       }
     >
       <p>Você está prestes a excluir o cliente: <span style={{ fontWeight: 700 }}>{user.name}</span></p>
