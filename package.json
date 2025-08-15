@@ -3,6 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "pnpm": {
+    "overrides": {
+      "react": "18.3.1",
+      "react-dom": "18.3.1",
+      "@types/react": "18.3.23",
+      "@types/react-dom": "18.3.7"
+    },
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "18",
+        "react-dom": "18",
+        "@types/react": "18",
+        "@types/react-dom": "18"
+      }
+    }
+  },
   "scripts": {
     "build:design-system": "pnpm --filter @teddy/design-system build",
     "build:customers": "pnpm run build:design-system && pnpm --filter @teddy/customers build",
