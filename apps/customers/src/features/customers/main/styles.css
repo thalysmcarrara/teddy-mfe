@@ -1,0 +1,57 @@
+.tcu-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tcu-card-list {
+  display: inline-grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.tcu-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tcu-card-content span{
+  font-size: 14px;
+}
+
+.tcu-top-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tcu-per-page-container {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+@media (min-width: 650px) {
+  .tcu-card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 950px) {
+  .tcu-card-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1260px) {
+  .tcu-card-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.tcu-create-client-btn {
+  margin: 20px 0;
+}
