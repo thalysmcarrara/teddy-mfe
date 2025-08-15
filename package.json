@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:design-system": "pnpm --filter @teddy/design-system build",
+    "build:customers": "pnpm run build:design-system && pnpm --filter @teddy/customers build",
+    "build:container": "pnpm run build:design-system && pnpm --filter @teddy/container build",
+    "dev": "pnpm --parallel --filter \"@teddy/container\" --filter \"@teddy/customers\" dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
