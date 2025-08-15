@@ -5,7 +5,8 @@ import { DashboardLayout } from '@src/layouts/dashboard-layout'
 import { AuthGuard, GuestGuard } from '@src/auth/guard';
 import { paths } from './paths';
 
-const CustomersPage =lazy(() => import('customers/CustomersPage')); ;
+const CustomersPage =lazy(() => import('customers/CustomersPage'));
+const SelectedPage = lazy(() => import('selected/SelectedPage'));
 
 const LoginPage = lazy(() => import('@src/pages/auth/login'));
 
@@ -29,7 +30,11 @@ export default function Router() {
       path: paths.selected,
       element: (
         <AuthGuard>
-          <DashboardLayout><>Selected Page</></DashboardLayout>
+          <DashboardLayout>
+            <Suspense>
+              <SelectedPage />
+            </Suspense>
+          </DashboardLayout>
         </AuthGuard>
       )
     },
