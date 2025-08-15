@@ -20,3 +20,6 @@ export type { CardProps } from './components/Card'
 
 export { NumberSelect } from './components/NumberSelect'
 export type { NumberSelectProps } from './components/NumberSelect'
+
+export { Empty } from './components/Empty'
+export type { EmptyProps } from './components/Empty'
