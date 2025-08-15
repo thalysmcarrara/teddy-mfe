@@ -4,7 +4,9 @@ import Modal from "./components/Modal"
 import { TextField } from "./components/Textfield"
 import { Pagination } from "./components/Pagination"
 import { IconButton } from "./components/IconButton"
-import { Menu } from "lucide-react"
+import { Menu, Pencil, Plus, Trash2 } from "lucide-react"
+import { Card } from "./components/Card/"
+import { NumberSelect } from "./components/NumberSelect"
 
 const App = () => {
   const [open, setOpen] = useState(false)
@@ -28,6 +30,13 @@ const App = () => {
         <TextField placeholder="Digite o nome"/>
         <Pagination totalPages={12} currentPage={page} onPageChange={setPage} siblingCount={1} />
         <IconButton Icon={<Menu size={36} />} />
+        <Card
+          title="Eduardo"
+          footerSlotLeft={<IconButton Icon={<Plus size={16} />} />}
+          footerSlotCenter={<IconButton Icon={<Pencil size={16} />} />}
+          footerSlotRight={<IconButton Icon={<Trash2 size={16} />} />}
+        />
+        <NumberSelect items={[5, 10, 20, 40]} onChange={() => {}} value={5} />
       </div>
     </div>
   )

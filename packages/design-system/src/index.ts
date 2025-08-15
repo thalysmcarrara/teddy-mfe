@@ -12,3 +12,9 @@ export type { TextFieldProps } from './components/Textfield'
 
 export { Pagination } from './components/Pagination'
 export type { PaginationProps } from './components/Pagination'
+
+export { Card } from './components/Card'
+export type { CardProps } from './components/Card'
+
+export { NumberSelect } from './components/NumberSelect'
+export type { NumberSelectProps } from './components/NumberSelect'
