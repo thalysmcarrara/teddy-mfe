@@ -20,10 +20,21 @@
     }
   },
   "scripts": {
+    "install:all": "pnpm install",
+
     "build:design-system": "pnpm --filter @teddy/design-system build",
     "build:customers": "pnpm run build:design-system && pnpm --filter @teddy/customers build",
     "build:container": "pnpm run build:design-system && pnpm --filter @teddy/container build",
-    "dev": "pnpm --parallel --filter \"@teddy/container\" --filter \"@teddy/customers\" dev",
+    "build:seleted": "pnpm run build:design-system && pnpm --filter @teddy/seleted build",
+
+    "build:all": "pnpm run build:design-system && pnpm --parallel --filter \"@teddy/container\" --filter \"@teddy/customers\" --filter \"@teddy/seleted\" build",
+
+    "dev": "pnpm --parallel --filter \"@teddy/container\" --filter \"@teddy/customers\" --filter \"@teddy/seleted\" dev",
+    "dev:all": "pnpm run dev",
+    "start": "pnpm run dev",
+
+    "clean": "pnpm --parallel --filter \"@teddy/design-system\" --filter \"@teddy/container\" --filter \"@teddy/customers\" --filter \"@teddy/seleted\" clean",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
