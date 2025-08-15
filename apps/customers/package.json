@@ -23,8 +23,11 @@
     "vite": "^7.1.2"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.85.3",
+    "@teddy/design-system": "workspace:*",
+    "axios": "^1.11.0",
+    "lucide-react": "^0.539.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@teddy/design-system": "workspace:*"
+    "react-dom": "^18.3.1"
   }
 }
