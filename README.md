@@ -22,6 +22,11 @@ Pré-requisitos: Docker
 docker compose -f docker-compose-dev.yml up --build
 ```
 
+### Vá até o navegador e digite na barra de busca:
+```bash
+localhost:5000
+```
+
 ## Comandos sem docker
 
 Desenvolvimento:
