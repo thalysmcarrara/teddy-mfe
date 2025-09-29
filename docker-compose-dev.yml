@@ -1,0 +1,36 @@
+services:
+  container:
+    build:
+      context: .
+      dockerfile: apps/container/Dockerfile.dev
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app/apps/container
+    command: pnpm preview
+
+  customers:
+    build:
+      context: .
+      dockerfile: apps/customers/Dockerfile.dev
+    ports:
+      - "5001:5001"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app/apps/customers
+    command: pnpm preview
+
+  selected:
+    build:
+      context: .
+      dockerfile: apps/selected/Dockerfile.dev
+    ports:
+      - "5002:5002"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app/apps/selected
+    command: pnpm preview

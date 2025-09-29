@@ -8,9 +8,7 @@ Estrutura sugerida:
 - @teddy/customers: microfrontend de clientes
 - @teddy/seleted: microfrontend adicional (porta 5002 em dev)
 
-Pré-requisitos: Node 18+, pnpm 10.14.0+
-
-### Infelizmente não tive tempo hábil suficiente pra configurar o docker e testes unitários
+Pré-requisitos: Docker
 
 # Obs a vercel limita a quantidade de visitas a página no plano gratuito será possível abrir uma vez e depois será necessário que eu gere outro link
 
@@ -20,11 +18,11 @@ Pré-requisitos: Node 18+, pnpm 10.14.0+
 
 ## Começo Rápido:
 
-1- pnpm install
+```bash
+docker compose -f docker-compose-dev.yml up --build
+```
 
-2- pnpm build:all
-
-3 - pnpm start
+## Comandos sem docker
 
 Desenvolvimento:
 - pnpm run dev — inicia container, customers e seleted em paralelo (hot-reload)

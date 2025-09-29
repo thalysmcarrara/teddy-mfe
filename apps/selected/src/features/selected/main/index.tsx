@@ -6,8 +6,7 @@ import { clearAllSelectedUsers } from "../utils/clearAllSelectedCustomers";
 import './styles.css'
 
 export function Main() {
-  const loggedUserName = localStorage.getItem('user')
-  if(!loggedUserName) throw new Error('you should be logged')
+  const loggedUserName = localStorage.getItem('user') as string
   const INTL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
   const selectedCustomers = useSelectedCustomers(loggedUserName);
 
